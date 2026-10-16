@@ -17,7 +17,6 @@ The exported V4 model scored **92/96 (95.83%) accuracy** and **95.87% macro F1**
 
 **The large model weights and Python environment are intentionally not included in Git.** Download the model ZIP separately; setup below is required after cloning. No retraining is needed to use the saved model.
 
-## Setup for a teammate
 
 Use **Python 3.12**, preferably 64-bit, and several GB of available memory/disk. The app uses CPU on macOS, Windows, and Linux. Only the original Mac deployment has been verified; other platforms require compatible PyTorch wheels and a local smoke test. Installation and the model download require internet; predictions run offline afterward.
 
@@ -159,39 +158,3 @@ V4 settings: selected learning rate `5e-6`, AdamW, batch 8, accumulation 2, weig
 V4 macro precision: **96.18%**; macro recall: **95.83%**. Balanced support makes weighted metrics equal to macro metrics. Both members correct in **14/16 context pairs**. All 96 test examples were retained. Three of four errors had scores at least 90%.
 
 Fresh validation/test exact normalized input, context, target, and group overlaps were checked; groups stayed within one split and metadata was excluded from inputs. These audits do not rule out semantic similarity, wording shortcuts, or author style. All later workplace examples are fictional and agent-authored, not independently annotated real workplace gold. The 95.83% result applies to this small test; later manual ambiguous examples revealed further errors.
-
-## Training and historical notebook
-
-Prediction does not require any training dependencies or a GPU.
-
-For archival review, open the notebook in `notebooks/`. It contains multiple historical experiments; **do not use Run all just to test the model**. Outputs were removed for sharing; authoritative recorded results are in `results/v4/`. Historical cells have `/content` Colab paths, execution-order dependencies, and earlier dataset/checkpoint requirements. The original 10,000-row user ZIP is not bundled.
-
-For the final V4 training stage only, use a CUDA GPU, the exact V3 contextual checkpoint, and the included frozen V4 splits:
-
-```bash
-cd training
-python -m pip install -r requirements.txt
-cd ..
-python training/train_evaluate_v4.py --init-model /path/to/v3/contextual_model --output-dir runs/v4_reproduction
-```
-
-The required V3 weights hash is `a6f8b3fa7565136761183cacbd4d61e9b55e3eb411004368cdaf5130335d5009`. **That V3 checkpoint is not included in this inference package**; obtain the retained artifact if available or recreate it through the historical workflow. The V4 model ZIP cannot substitute for V3 when reproducing V4's original training. A new output directory is required. GPU/package nondeterminism can change rerun results. Training code is preserved and syntax-checked; packaging did not rerun training or claim new metrics. This dataset's test is now exposed; use a genuinely new held-out test when developing further improvements.
-
-The proposed V5 ambiguous-reply workflow is not included as a trained model. It has no measured results and must not be confused with V4.
-
-## Sharing with a teammate
-
-Send your teammate [this repository](https://github.com/NShenbagakrithika/latent-commitment-inference-model) and ask them to follow the setup instructions above. The model is a separate [V4 release download](https://github.com/NShenbagakrithika/latent-commitment-inference-model/releases/tag/v4.0.0).
-
-Keep `.gitignore`: model weights, archives, environments, caches, generated training runs, and common credential files should stay out of source commits. For future improvements, version new model artifacts separately and report their own validation/test results.
-
-Base model: [microsoft/deberta-v3-base](https://huggingface.co/microsoft/deberta-v3-base). See `NOTICE.txt` for attribution and licensing status.
-
-## Troubleshooting
-
-- **Missing model file:** download the complete original model ZIP and run `install_model.py`.
-- **Checksum mismatch:** the wrong model or an incomplete download was supplied; obtain the verified V4 artifact.
-- **No matching package/wheel:** use Python 3.12 and the appropriate PyTorch installation for your operating system.
-- **Long input:** shorten the preceding conversation to fit 256 model tokens.
-- **Unexpected prediction:** check that context and target were entered separately. Do not treat a high score as proof; ambiguous language is a known weakness.
-- **No Colab GPU / Drive authorization error:** local inference needs neither Colab nor Drive once the files have been downloaded.
