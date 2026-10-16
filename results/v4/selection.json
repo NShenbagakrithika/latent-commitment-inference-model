@@ -1,0 +1,61 @@
+{
+  "selected_candidate": "pair_lr5e6",
+  "selected_model_sha256": "fc3f77b652ee7231430eb95d90d300b6496983fc37a1c42670017d8936b2a633",
+  "selection_used_test": false,
+  "candidate_comparison": {
+    "pair_lr5e6": {
+      "learning_rate": 5e-06,
+      "pair_loss_weight": 0.2,
+      "margin": 1.0,
+      "best_selection_score": 0.975475243147657,
+      "selection_score_definition": ".8*validation_macro_f1 + .2*validation_pair_both_correct",
+      "epochs": 6.0,
+      "best_checkpoint": "/content/latent_commitment_workplace_v4/pair_lr5e6_checkpoints/checkpoint-198",
+      "training_seconds": 138.44182538986206,
+      "validation": {
+        "eval_loss": 0.07327884435653687,
+        "eval_accuracy": 0.984375,
+        "eval_macro_precision": 0.9833333333333334,
+        "eval_macro_recall": 0.9875,
+        "eval_macro_f1": 0.9849690539345712,
+        "eval_pair_both_correct": 0.9375,
+        "eval_selection_score": 0.975475243147657,
+        "eval_runtime": 0.2547,
+        "eval_samples_per_second": 251.282,
+        "eval_steps_per_second": 15.705,
+        "epoch": 6.0
+      },
+      "seed": 20261017,
+      "initialization": "/content/latent_commitment_natural_v3/contextual_model",
+      "test_used_for_selection": false,
+      "model_sha256": "fc3f77b652ee7231430eb95d90d300b6496983fc37a1c42670017d8936b2a633"
+    },
+    "pair_lr1e5": {
+      "learning_rate": 1e-05,
+      "pair_loss_weight": 0.2,
+      "margin": 1.0,
+      "best_selection_score": 0.975475243147657,
+      "selection_score_definition": ".8*validation_macro_f1 + .2*validation_pair_both_correct",
+      "epochs": 5.0,
+      "best_checkpoint": "/content/latent_commitment_workplace_v4/pair_lr1e5_checkpoints/checkpoint-99",
+      "training_seconds": 127.4549651145935,
+      "validation": {
+        "eval_loss": 0.02138405479490757,
+        "eval_accuracy": 0.984375,
+        "eval_macro_precision": 0.9833333333333334,
+        "eval_macro_recall": 0.9875,
+        "eval_macro_f1": 0.9849690539345712,
+        "eval_pair_both_correct": 0.9375,
+        "eval_selection_score": 0.975475243147657,
+        "eval_runtime": 0.1658,
+        "eval_samples_per_second": 386.101,
+        "eval_steps_per_second": 24.131,
+        "epoch": 5.0
+      },
+      "seed": 20261017,
+      "initialization": "/content/latent_commitment_natural_v3/contextual_model",
+      "test_used_for_selection": false,
+      "model_sha256": "662c987106b3e018e159fd9361ef0ffe9ae6d755d0a37c8c19a212334a50828a"
+    }
+  }
+}

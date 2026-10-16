@@ -1,0 +1,97 @@
+sample_id,labels,target_utterance,conversation_context,previous_prediction,new_prediction,previous_correct,new_correct
+v4_test_0001,0,I am not volunteering. I only wanted to know who was covering it.,[account lead]: Are you volunteering to take over the escalation queue?,0,0,True,True
+v4_test_0002,0,"Amended, checked and saved before this conversation started.",[co-worker]: Did you amend the customer address?,0,0,True,True
+v4_test_0003,0,"My notice period ends before that session, so I won't be running it.",[programme lead]: Will you run the next coaching session?,0,0,True,True
+v4_test_0004,0,No. I'm reading the guide's example answer aloud.,[co-worker]: The guide says 'I will submit the appeal'. Is that something you're agreeing to?,0,0,True,True
+v4_test_0005,0,"The refund team deals with them. I'm telling you the process, not offering to process them.",[account lead]: Can you deal with the refunds?,0,0,True,True
+v4_test_0006,0,"Yes, I handed it over yesterday, with all my checks finished.",[co-worker]: Is the revised survey already with the analyst?,0,0,True,True
+v4_test_0007,0,After lunch is impossible for me. I can't offer any cover in that period.,[programme lead]: Could you cover the classroom after lunch?,0,0,True,True
+v4_test_0008,0,The adviser promised. I recorded her words in the notes.,[co-worker]: Who promised to contact the regulator?,0,0,True,True
+v4_test_0009,0,Please don't assign it to me; I won't be able to take it forward.,[account lead]: Can I assign this entire case to you?,0,0,True,True
+v4_test_0010,0,"I prefer it because it's quiet. That's a room preference, not an offer to run anything.",[co-worker]: Do you prefer the small room for the briefing?,0,0,True,True
+v4_test_0011,0,I don't work Saturdays and won't be attending.,[programme lead]: We need help with interviews. [employee]: Which day? [programme lead]: Saturday.,0,0,True,True
+v4_test_0012,0,I returned it this morning; the acknowledgement is already in my inbox.,[co-worker]: Did you return the signed declaration? [employee]: The current one? [co-worker]: Yes.,0,0,True,True
+v4_test_0013,0,That's the agent's commitment. I copied it for the record.,[account lead]: The notes say 'I'll own the response'. [employee]: Whose notes are those? [account lead]: You copied them from the agent.,0,0,True,True
+v4_test_0014,0,I leave at four and can't stay for any of that review.,[co-worker]: Could you stay for the final review? [employee]: What time does it start? [co-worker]: After six.,0,0,True,True
+v4_test_0015,0,"No, I was asking for directions. I haven't accepted venue responsibility.",[programme lead]: Are you taking responsibility for the venue? [employee]: I asked where it was. [programme lead]: So are you taking it?,0,0,True,True
+v4_test_0016,0,"I can explain the old guide, but I'm not available to maintain the database.",[co-worker]: Do you know how this database is maintained? [employee]: I wrote the old guide. [co-worker]: Can you maintain it now?,0,0,True,True
+v4_test_0017,1,I've opened the statements and I'm matching each charge to the receipts.,[account lead]: The disputed charges still have no investigator.,1,1,True,True
+v4_test_0018,1,The two rotas are side by side on my screen and I'm checking the overlapping names.,[co-worker]: We need another person working on the rota conflict.,1,1,True,True
+v4_test_0019,1,The question booklets are on my table and I'm putting them into candidate packs.,[programme lead]: Is anyone getting the assessment materials ready?,1,1,True,True
+v4_test_0020,1,I've got the first referee on the line and her response form open.,[co-worker]: The reference checks need somebody to begin calling.,1,1,True,True
+v4_test_0021,1,I'm tracing the transfer ID through the log and checking the first rejection.,[account lead]: Who can start finding out why the transfer failed?,1,1,True,True
+v4_test_0022,1,I've taken the marked catalogue to my workstation and started correcting page one.,[co-worker]: There isn't an owner for the catalogue corrections.,1,1,True,True
+v4_test_0023,1,He's sharing his screen with me and we're entering the recovery details.,[programme lead]: We need someone to take the learner through the access steps.,1,1,True,True
+v4_test_0024,1,"I'm in the storeroom with the receiver, checking the damage photos against the items.",[co-worker]: Has anybody started the damaged-stock investigation?,1,1,True,True
+v4_test_0025,1,The closure checklist is open here and I'm verifying the outstanding balance.,[account lead]: The account closure still needs a person working on it.,1,1,True,True
+v4_test_0026,1,I've started matching the meal choices against the attendance confirmations.,[co-worker]: Can someone get the catering numbers sorted?,1,1,True,True
+v4_test_0027,1,I've opened that report and I'm following the first failed upload through the log.,[programme lead]: Nobody has picked up the failed assessment upload. [employee]: Where is the error report? [programme lead]: In the shared folder.,1,1,True,True
+v4_test_0028,1,"I'm in that draft now, applying the edits in the first section.",[co-worker]: The newsletter edits need a pair of hands. [employee]: Is this the current draft? [co-worker]: Yes.,1,1,True,True
+v4_test_0029,1,I'm comparing her copy with our ledger and checking the opening figure.,[account lead]: We have to work out why the statement is wrong. [employee]: Has the customer sent her copy? [account lead]: It is attached.,1,1,True,True
+v4_test_0030,1,I've brought them down and started laying them out by product type.,[co-worker]: Is anybody setting up the demonstration table? [employee]: Are the samples upstairs? [co-worker]: Beside the lift.,1,1,True,True
+v4_test_0031,1,"We're at her laptop together, going through the tutor-account setup.",[programme lead]: We need a person helping the new tutor with the portal. [employee]: Is she here? [programme lead]: In room six.,1,1,True,True
+v4_test_0032,1,I've got the tray and I'm matching each badge number to the return list.,[co-worker]: The returned badges need checking. [employee]: Are they in the cupboard? [co-worker]: In the tray beside it.,1,1,True,True
+v4_test_0033,2,I'll handle the investigation. The customer response will need a different owner.,[account lead]: Will you handle both the investigation and the customer response?,2,2,True,True
+v4_test_0034,2,I'll staff it until lunchtime. I can't take the afternoon shift.,[co-worker]: Can you staff the desk for the whole day?,2,2,True,True
+v4_test_0035,2,I will deliver the first two. The third is beyond what I'm accepting.,[programme lead]: Can you deliver all three training modules?,2,2,True,True
+v4_test_0036,2,"I'll revise the safety chapter, but I cannot undertake the whole handbook.",[co-worker]: Will you rewrite the entire handbook?,0,2,False,True
+v4_test_0037,2,I can give an estimate today; I'm not committing to that being a firm completion date.,[account lead]: Can you give the client a firm completion date today?,0,0,False,False
+v4_test_0038,2,I'll organize transport only. Booking the activity and collecting money must stay with somebody else.,[co-worker]: Would you organize the whole staff outing?,2,2,True,True
+v4_test_0039,2,"I'll assess the first group, and only that group. I can't accept the remaining submissions.",[programme lead]: Will you assess every submission?,2,2,True,True
+v4_test_0040,2,I accept the first night. I'm unavailable for the other nights.,[co-worker]: Could you cover the complete on-call period?,2,2,True,True
+v4_test_0041,2,I will issue it after the supervisor authorizes it. The authorization is still waiting in her queue.,[account lead]: Can you issue the credit?,2,2,True,True
+v4_test_0042,2,"I'll try for Monday, but I can't guarantee that date before the terminology query is resolved.",[co-worker]: Can we promise the translated leaflet by Monday?,2,2,True,True
+v4_test_0043,2,I'll run the written assessments only. I won't take the oral assessments as well.,[programme lead]: Will you run the assessment day? [employee]: Does that include the oral assessments? [programme lead]: Yes.,0,2,False,True
+v4_test_0044,2,I'll repair the two at my bench. I can't accept responsibility for the other six.,[co-worker]: Can you finish all the repairs? [employee]: How many machines? [co-worker]: Eight.,2,2,True,True
+v4_test_0045,2,I'll take it on when the transfer is approved; until then my acceptance is conditional.,[account lead]: Will you take this case? [employee]: Has it been formally transferred? [account lead]: That is awaiting approval.,2,2,True,True
+v4_test_0046,2,"Provisionally yes, but I still need the rota change before I can confirm.",[co-worker]: Can you attend the audit? [employee]: Has the rota changed? [co-worker]: Not yet.,2,2,True,True
+v4_test_0047,2,"I'll give you a draft tonight, with final proofreading to follow later.",[programme lead]: Can we count on you for a finished lesson pack? [employee]: By when? [programme lead]: Tonight.,3,3,False,False
+v4_test_0048,2,I'll oversee the morning visit. Please find a different person for the afternoon.,[co-worker]: Could you oversee the entire building visit? [employee]: I'm available in the morning. [co-worker]: We also need the afternoon.,2,2,True,True
+v4_test_0049,3,"Yes, I'll own the complete handover and make sure the receiving team has everything.",[account lead]: Will you take responsibility for the entire account handover?,3,3,True,True
+v4_test_0050,3,"I'll collect the orders, book the delivery and confirm it with the cafe today.",[co-worker]: Can you organize the coffee delivery for the workshop?,3,3,True,True
+v4_test_0051,3,I will run it. Confirm me as the briefing lead.,[programme lead]: Who will run the next tutor briefing?,3,3,True,True
+v4_test_0052,3,"Yes, I'll coordinate the whole collection and keep the payment record.",[co-worker]: Could you coordinate the office collection?,3,3,True,True
+v4_test_0053,3,I'll write and send that update before I leave today.,[account lead]: We need a person to send the customer update.,3,3,True,True
+v4_test_0054,3,I'll write the actual checklist and send you the completed version tomorrow.,[co-worker]: The example is just for reference. Will you write the actual checklist?,3,3,True,True
+v4_test_0055,3,I accept all the submissions in that allocation and will return the marks on Friday.,[programme lead]: Can you accept the full marking allocation?,3,3,True,True
+v4_test_0056,3,"Yes, I'm responsible for arranging the lunch from here.",[co-worker]: Will you take responsibility for the lunch arrangements?,3,3,True,True
+v4_test_0057,3,I'll issue the revised letter now and record the send confirmation.,[account lead]: The authorization is complete. Can you issue the revised letter?,3,3,True,True
+v4_test_0058,3,I'll finish every section of the pack and have it ready before arrival time.,[co-worker]: Can you finish the welcome pack?,3,3,True,True
+v4_test_0059,3,I'll lead the whole training day and do the debrief afterwards.,"[programme lead]: Could you lead the training day? [employee]: Has my other session been reassigned? [programme lead]: Yes, it has.",3,3,True,True
+v4_test_0060,3,I'll take that call at ten and send you a written follow-up.,[co-worker]: Will you own the supplier call? [employee]: Is the time fixed? [co-worker]: Ten tomorrow.,3,3,True,True
+v4_test_0061,3,I'll process the complete batch and send the customer the confirmations.,[account lead]: Can you process these returns? [employee]: Have all of them been approved? [account lead]: All approved.,3,3,True,True
+v4_test_0062,3,I'll distribute the notices to every address on it tomorrow morning.,[co-worker]: We need someone to distribute the notices. [employee]: Is the list final? [co-worker]: This is the final list.,3,3,True,True
+v4_test_0063,3,I will deliver the briefing and give each assessor the signed-off materials.,[programme lead]: Can you deliver the assessment briefing? [employee]: Are the materials signed off? [programme lead]: Yes.,3,3,True,True
+v4_test_0064,3,I'll fit the part today and complete the restart checks.,[co-worker]: The replacement part is here. [employee]: Is the machine available? [co-worker]: It's isolated and ready.,3,3,True,True
+v4_test_0065,0,I am comfortable with that proposal.,[programme lead]: Would the end seat be comfortable for you while you attend?,3,0,False,True
+v4_test_0066,3,I am comfortable with that proposal.,[programme lead]: Are you accepting the proposal that you will organize seating for all the attendees?,3,3,True,True
+v4_test_0067,0,You may record my acceptance.,[co-worker]: Can I record that you accept the invitation to the optional staff picnic as a guest?,3,3,False,False
+v4_test_0068,3,You may record my acceptance.,[co-worker]: Can I record that you accept responsibility for organizing the staff picnic?,3,3,True,True
+v4_test_0069,0,I will see to the final email.,[account lead]: Which line does the fictional agent say on page two? Please quote his words.,3,0,False,True
+v4_test_0070,3,I will see to the final email.,[account lead]: Are you taking charge of sending the actual account-closure email?,3,3,True,True
+v4_test_0071,0,That gets my approval.,[co-worker]: Do you approve of this shade of paint for the staff room?,3,0,False,True
+v4_test_0072,3,That gets my approval.,[co-worker]: Will you personally take responsibility for ordering and applying that paint as proposed?,3,3,True,True
+v4_test_0073,3,I'll take the whole assignment.,[programme lead]: The training dates and your cover are now confirmed. Will you accept the assignment?,3,3,True,True
+v4_test_0074,2,I'll take the whole assignment.,[programme lead]: Would you accept the assignment if your cover is arranged? There is no cover yet.,2,2,True,True
+v4_test_0075,3,I will complete that deliverable.,[account lead]: The agreed deliverable is the final account review; all permissions are granted. Will you complete it?,3,3,True,True
+v4_test_0076,2,I will complete that deliverable.,"[account lead]: For now can you agree to an initial review only, with a final review still required from another owner?",2,2,True,True
+v4_test_0077,3,I'll make the arrangements myself.,[co-worker]: The supplier has confirmed the dates and the order is approved. Will you arrange delivery?,3,3,True,True
+v4_test_0078,2,I'll make the arrangements myself.,[co-worker]: Would you arrange delivery if the supplier confirms the dates? They have not replied yet.,2,2,True,True
+v4_test_0079,3,You can rely on my taking it forward.,[programme lead]: All resources are secured. Will you take ownership of the complete tutor workshop?,3,3,True,True
+v4_test_0080,2,You can rely on my taking it forward.,[programme lead]: Will you take ownership if the additional tutor is funded? That funding is still undecided.,2,2,True,True
+v4_test_0081,2,The materials are spread out on my bench.,"[co-worker]: Can you do only the initial materials check, leaving all assembly and final testing outside your scope?",1,2,False,True
+v4_test_0082,1,The materials are spread out on my bench.,[co-worker]: The full assembly job needs someone to begin. Has anyone picked it up now?,1,1,True,True
+v4_test_0083,2,I've moved my other meeting for this.,[programme lead]: Would you host the examiner visit if permission arrives? Permission is still unresolved.,2,2,True,True
+v4_test_0084,1,I've moved my other meeting for this.,[programme lead]: The examiner visit is confirmed and needs a host. Who is picking it up?,1,1,True,True
+v4_test_0085,2,The live files are open in my editor.,"[account lead]: Could you take the initial file inspection only, with the final reconciliation assigned elsewhere?",1,2,False,True
+v4_test_0086,1,The live files are open in my editor.,[account lead]: The reconciliation still has no person doing it. Has someone begun work on it?,1,1,True,True
+v4_test_0087,2,My calls list is ready beside the phone.,[co-worker]: Could you make the calls if the contact permissions are approved? No approval has arrived.,2,2,True,True
+v4_test_0088,1,My calls list is ready beside the phone.,[co-worker]: All contact permissions are approved and these customers need follow-up. Any takers?,1,1,True,True
+v4_test_0089,1,The first account is already on my screen.,[account lead]: Nobody owns the live account checks. Is anyone beginning them?,1,1,True,True
+v4_test_0090,0,The first account is already on my screen.,[account lead]: What was on your screen during yesterday's completed demonstration?,0,0,True,True
+v4_test_0091,1,We are going over her request together.,[programme lead]: This learner needs help resolving her appeal. Are you working with her now?,3,3,False,False
+v4_test_0092,0,We are going over her request together.,[programme lead]: What is happening in the training recording you are describing?,0,0,True,True
+v4_test_0093,1,The first poster is on the board.,[co-worker]: The noticeboard setup has no owner yet. Has anyone made a start?,1,1,True,True
+v4_test_0094,0,The first poster is on the board.,[co-worker]: Where did the instructor leave the sample poster after finishing the class?,0,0,True,True
+v4_test_0095,1,Their adviser is talking through the record with me.,[account lead]: The disputed transfer needs someone investigating it. Are you picking it up?,1,1,True,True
+v4_test_0096,0,Their adviser is talking through the record with me.,[account lead]: Why does your screen show a call while you watch the adviser demonstrate the record system?,0,0,True,True

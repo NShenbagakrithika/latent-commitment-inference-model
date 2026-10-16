@@ -1,0 +1,6 @@
+Base model: microsoft/deberta-v3-base (Microsoft).
+Model card and upstream terms: https://huggingface.co/microsoft/deberta-v3-base
+Python dependencies retain their respective licenses.
+No new license is assigned to the author's project code/data by this packaging step.
+Choose an appropriate project license if you want to grant broader reuse rights.
+The included conversations are fictional and labels are provisional.

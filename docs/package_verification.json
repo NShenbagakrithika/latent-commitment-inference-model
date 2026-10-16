@@ -1,0 +1,17 @@
+{
+  "package": "Current trained V4; no retraining during packaging",
+  "syntax_checked": [
+    "test_model.py",
+    "install_model.py",
+    "training/train_evaluate_v4.py"
+  ],
+  "installer": "Verified original archive SHA256 and all six installed inference files",
+  "smoke_test_environment": "Existing tested macOS Python 3.12 virtual environment; no fresh cross-platform installation performed",
+  "explicit_acceptance_test": "EXPLICIT_COMMITMENT",
+  "refusal_test": "NO_COMMITMENT",
+  "historical_notebook_cells": 41,
+  "notebook_outputs_removed": true,
+  "model_weights_in_source_package": false,
+  "large_model_distribution": "Separate original ZIP via GitHub Release or access-controlled file sharing",
+  "training_reproduction": "Script preserved and syntax checked; not executed during packaging"
+}

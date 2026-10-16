@@ -1,0 +1,23 @@
+# Large model and downloaded archives: distribute as a Release asset or Drive download.
+best_model/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.zip
+*.part[0-9]*
+# Local environments, generated runs, secrets and caches
+.venv/
+venv/
+.python/
+runs/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+.env
+.env.*
+!.env.example
+credentials*.json
+token*.json

@@ -1,0 +1,1121 @@
+{
+  "source": "Fictional agent-authored; provisional policy labels; not independently human annotated",
+  "old_v3_all_partitions_now_training": true,
+  "test_frozen_before_training": true,
+  "split_sizes": {
+    "train": {
+      "rows": 528,
+      "labels": {
+        "0": 132,
+        "1": 132,
+        "2": 132,
+        "3": 132
+      },
+      "unique_targets": 448,
+      "context_pairs": 80
+    },
+    "validation": {
+      "rows": 64,
+      "labels": {
+        "0": 20,
+        "1": 14,
+        "2": 16,
+        "3": 14
+      },
+      "unique_targets": 48,
+      "context_pairs": 16
+    },
+    "test": {
+      "rows": 96,
+      "labels": {
+        "0": 24,
+        "1": 24,
+        "2": 24,
+        "3": 24
+      },
+      "unique_targets": 80,
+      "context_pairs": 16
+    }
+  },
+  "cross_split_overlap": {
+    "train_validation": {
+      "group_id": 0,
+      "target_utterance": 0,
+      "conversation_context": 0,
+      "model_input_text": 0
+    },
+    "train_test": {
+      "group_id": 0,
+      "target_utterance": 0,
+      "conversation_context": 0,
+      "model_input_text": 0
+    },
+    "validation_test": {
+      "group_id": 0,
+      "target_utterance": 0,
+      "conversation_context": 0,
+      "model_input_text": 0
+    }
+  },
+  "sha256": {
+    "train": "1bd3629c1120a36b8f5622b48907d830a7ac0b7d0169237ef91db767e7586dd4",
+    "validation": "0414a4c63cb83aaa9940d7c0097fbe019e4b1ba49daf65a46ddc99a572b9a6cc",
+    "test": "08aa672d648cb29cfb6e3a8e19a8627d3e057e071583062c1c4f70281b64de2a"
+  },
+  "nearest_train_neighbors": [
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0001",
+      "nearest_train_id": "v4_train_0323",
+      "text_similarity": 0.676737160120846
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0002",
+      "nearest_train_id": "v4_train_0002",
+      "text_similarity": 0.7297297297297297
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0003",
+      "nearest_train_id": "v4_train_0372",
+      "text_similarity": 0.68
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0004",
+      "nearest_train_id": "v4_train_0284",
+      "text_similarity": 0.6935483870967742
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0005",
+      "nearest_train_id": "v4_train_0235",
+      "text_similarity": 0.6627906976744186
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0006",
+      "nearest_train_id": "v4_train_0057",
+      "text_similarity": 0.6808510638297872
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0007",
+      "nearest_train_id": "v4_train_0287",
+      "text_similarity": 0.6443768996960486
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0008",
+      "nearest_train_id": "v4_train_0333",
+      "text_similarity": 0.6706231454005934
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0009",
+      "nearest_train_id": "v4_train_0304",
+      "text_similarity": 0.6956521739130435
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0010",
+      "nearest_train_id": "v4_train_0244",
+      "text_similarity": 0.6804733727810651
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0011",
+      "nearest_train_id": "v4_train_0043",
+      "text_similarity": 0.6647058823529411
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0012",
+      "nearest_train_id": "v4_train_0037",
+      "text_similarity": 0.6590257879656161
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0013",
+      "nearest_train_id": "v4_train_0033",
+      "text_similarity": 0.6647727272727273
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0014",
+      "nearest_train_id": "v4_train_0043",
+      "text_similarity": 0.6646884272997032
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0015",
+      "nearest_train_id": "v4_train_0505",
+      "text_similarity": 0.7258485639686684
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0016",
+      "nearest_train_id": "v4_train_0245",
+      "text_similarity": 0.688
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0017",
+      "nearest_train_id": "v4_train_0415",
+      "text_similarity": 0.7267605633802817
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0018",
+      "nearest_train_id": "v4_train_0413",
+      "text_similarity": 0.7287671232876712
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0019",
+      "nearest_train_id": "v4_train_0408",
+      "text_similarity": 0.7086614173228346
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0020",
+      "nearest_train_id": "v4_train_0306",
+      "text_similarity": 0.6827956989247311
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0021",
+      "nearest_train_id": "v4_train_0195",
+      "text_similarity": 0.6395663956639567
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0022",
+      "nearest_train_id": "v4_train_0071",
+      "text_similarity": 0.6826347305389222
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0023",
+      "nearest_train_id": "v4_train_0054",
+      "text_similarity": 0.6703910614525139
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0024",
+      "nearest_train_id": "v4_train_0313",
+      "text_similarity": 0.6686217008797654
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0025",
+      "nearest_train_id": "v4_train_0093",
+      "text_similarity": 0.6956521739130435
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0026",
+      "nearest_train_id": "v4_train_0322",
+      "text_similarity": 0.7150537634408602
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0027",
+      "nearest_train_id": "v4_train_0119",
+      "text_similarity": 0.6972477064220184
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0028",
+      "nearest_train_id": "v4_train_0527",
+      "text_similarity": 0.7098591549295775
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0029",
+      "nearest_train_id": "v4_train_0326",
+      "text_similarity": 0.7109826589595376
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0030",
+      "nearest_train_id": "v4_train_0087",
+      "text_similarity": 0.7040498442367601
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0031",
+      "nearest_train_id": "v4_train_0264",
+      "text_similarity": 0.7477203647416414
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0032",
+      "nearest_train_id": "v4_train_0257",
+      "text_similarity": 0.6666666666666666
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0033",
+      "nearest_train_id": "v4_train_0115",
+      "text_similarity": 0.7046979865771812
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0034",
+      "nearest_train_id": "v4_train_0434",
+      "text_similarity": 0.7197640117994101
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0035",
+      "nearest_train_id": "v4_train_0455",
+      "text_similarity": 0.6256684491978609
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0036",
+      "nearest_train_id": "v4_train_0435",
+      "text_similarity": 0.6685082872928176
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0037",
+      "nearest_train_id": "v4_train_0219",
+      "text_similarity": 0.7215686274509804
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0038",
+      "nearest_train_id": "v4_train_0272",
+      "text_similarity": 0.7770700636942676
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0039",
+      "nearest_train_id": "v4_train_0240",
+      "text_similarity": 0.6711864406779661
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0040",
+      "nearest_train_id": "v4_train_0106",
+      "text_similarity": 0.7603833865814696
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0041",
+      "nearest_train_id": "v4_train_0265",
+      "text_similarity": 0.6842105263157895
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0042",
+      "nearest_train_id": "v4_train_0466",
+      "text_similarity": 0.7215909090909091
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0043",
+      "nearest_train_id": "v4_train_0267",
+      "text_similarity": 0.778816199376947
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0044",
+      "nearest_train_id": "v4_train_0268",
+      "text_similarity": 0.7014492753623188
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0045",
+      "nearest_train_id": "v4_train_0095",
+      "text_similarity": 0.6580645161290323
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0046",
+      "nearest_train_id": "v4_train_0462",
+      "text_similarity": 0.7267267267267268
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0047",
+      "nearest_train_id": "v4_train_0342",
+      "text_similarity": 0.7146814404432132
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0048",
+      "nearest_train_id": "v4_train_0430",
+      "text_similarity": 0.7066246056782335
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0049",
+      "nearest_train_id": "v4_train_0096",
+      "text_similarity": 0.6184971098265896
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0050",
+      "nearest_train_id": "v4_train_0468",
+      "text_similarity": 0.7701149425287356
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0051",
+      "nearest_train_id": "v4_train_0122",
+      "text_similarity": 0.7945205479452054
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0052",
+      "nearest_train_id": "v4_train_0121",
+      "text_similarity": 0.6742857142857143
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0053",
+      "nearest_train_id": "v4_train_0468",
+      "text_similarity": 0.7076023391812866
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0054",
+      "nearest_train_id": "v4_train_0449",
+      "text_similarity": 0.7987987987987988
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0055",
+      "nearest_train_id": "v4_train_0214",
+      "text_similarity": 0.7027027027027027
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0056",
+      "nearest_train_id": "v4_train_0265",
+      "text_similarity": 0.6796657381615598
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0057",
+      "nearest_train_id": "v4_train_0436",
+      "text_similarity": 0.6526315789473685
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0058",
+      "nearest_train_id": "v4_train_0055",
+      "text_similarity": 0.6492753623188405
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0059",
+      "nearest_train_id": "v4_train_0190",
+      "text_similarity": 0.7210884353741497
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0060",
+      "nearest_train_id": "v4_train_0437",
+      "text_similarity": 0.6684210526315789
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0061",
+      "nearest_train_id": "v4_train_0495",
+      "text_similarity": 0.6483516483516484
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0062",
+      "nearest_train_id": "v4_train_0496",
+      "text_similarity": 0.7227414330218068
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0063",
+      "nearest_train_id": "v4_train_0491",
+      "text_similarity": 0.746177370030581
+    },
+    {
+      "split": "validation",
+      "sample_id": "v4_validation_0064",
+      "nearest_train_id": "v4_train_0112",
+      "text_similarity": 0.7542087542087542
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0001",
+      "nearest_train_id": "v4_train_0023",
+      "text_similarity": 0.6511627906976745
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0002",
+      "nearest_train_id": "v4_train_0011",
+      "text_similarity": 0.6912751677852349
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0003",
+      "nearest_train_id": "v4_train_0240",
+      "text_similarity": 0.6772151898734177
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0004",
+      "nearest_train_id": "v4_train_0170",
+      "text_similarity": 0.6487935656836461
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0005",
+      "nearest_train_id": "v4_train_0019",
+      "text_similarity": 0.6647398843930635
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0006",
+      "nearest_train_id": "v4_train_0168",
+      "text_similarity": 0.6451612903225806
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0007",
+      "nearest_train_id": "v4_train_0054",
+      "text_similarity": 0.6628242074927954
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0008",
+      "nearest_train_id": "v4_train_0269",
+      "text_similarity": 0.6556291390728477
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0009",
+      "nearest_train_id": "v4_train_0264",
+      "text_similarity": 0.7044776119402985
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0010",
+      "nearest_train_id": "v4_train_0006",
+      "text_similarity": 0.6312849162011173
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0011",
+      "nearest_train_id": "v4_train_0130",
+      "text_similarity": 0.6111111111111112
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0012",
+      "nearest_train_id": "v4_train_0019",
+      "text_similarity": 0.6137566137566137
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0013",
+      "nearest_train_id": "v4_train_0170",
+      "text_similarity": 0.568075117370892
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0014",
+      "nearest_train_id": "v4_train_0286",
+      "text_similarity": 0.6161879895561357
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0015",
+      "nearest_train_id": "v4_train_0442",
+      "text_similarity": 0.5727482678983834
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0016",
+      "nearest_train_id": "v4_train_0020",
+      "text_similarity": 0.5647058823529412
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0017",
+      "nearest_train_id": "v4_train_0298",
+      "text_similarity": 0.6648793565683646
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0018",
+      "nearest_train_id": "v4_train_0245",
+      "text_similarity": 0.7139107611548556
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0019",
+      "nearest_train_id": "v4_train_0499",
+      "text_similarity": 0.699228791773779
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0020",
+      "nearest_train_id": "v4_train_0025",
+      "text_similarity": 0.6612466124661247
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0021",
+      "nearest_train_id": "v4_train_0043",
+      "text_similarity": 0.6797752808988764
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0022",
+      "nearest_train_id": "v4_train_0303",
+      "text_similarity": 0.7189873417721518
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0023",
+      "nearest_train_id": "v4_train_0047",
+      "text_similarity": 0.7774936061381074
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0024",
+      "nearest_train_id": "v4_train_0241",
+      "text_similarity": 0.6719160104986877
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0025",
+      "nearest_train_id": "v4_train_0499",
+      "text_similarity": 0.6564102564102564
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0026",
+      "nearest_train_id": "v4_train_0299",
+      "text_similarity": 0.6462395543175488
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0027",
+      "nearest_train_id": "v4_train_0041",
+      "text_similarity": 0.5805084745762712
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0028",
+      "nearest_train_id": "v4_train_0047",
+      "text_similarity": 0.6024096385542169
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0029",
+      "nearest_train_id": "v4_train_0047",
+      "text_similarity": 0.5777777777777777
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0030",
+      "nearest_train_id": "v4_train_0243",
+      "text_similarity": 0.5958429561200924
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0031",
+      "nearest_train_id": "v4_train_0267",
+      "text_similarity": 0.56575682382134
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0032",
+      "nearest_train_id": "v4_train_0304",
+      "text_similarity": 0.5868544600938967
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0033",
+      "nearest_train_id": "v4_train_0073",
+      "text_similarity": 0.6720867208672087
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0034",
+      "nearest_train_id": "v4_train_0094",
+      "text_similarity": 0.6871165644171779
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0035",
+      "nearest_train_id": "v4_train_0089",
+      "text_similarity": 0.6687306501547987
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0036",
+      "nearest_train_id": "v4_train_0510",
+      "text_similarity": 0.7107438016528925
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0037",
+      "nearest_train_id": "v4_train_0402",
+      "text_similarity": 0.656084656084656
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0038",
+      "nearest_train_id": "v4_train_0087",
+      "text_similarity": 0.6574585635359116
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0039",
+      "nearest_train_id": "v4_train_0254",
+      "text_similarity": 0.6460674157303371
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0040",
+      "nearest_train_id": "v4_train_0020",
+      "text_similarity": 0.7315634218289085
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0041",
+      "nearest_train_id": "v4_train_0056",
+      "text_similarity": 0.6593406593406593
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0042",
+      "nearest_train_id": "v4_train_0187",
+      "text_similarity": 0.6820512820512821
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0043",
+      "nearest_train_id": "v4_train_0413",
+      "text_similarity": 0.6426966292134831
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0044",
+      "nearest_train_id": "v4_train_0408",
+      "text_similarity": 0.6495327102803738
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0045",
+      "nearest_train_id": "v4_train_0410",
+      "text_similarity": 0.5726872246696035
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0046",
+      "nearest_train_id": "v4_train_0063",
+      "text_similarity": 0.622107969151671
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0047",
+      "nearest_train_id": "v4_train_0256",
+      "text_similarity": 0.5913461538461539
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0048",
+      "nearest_train_id": "v4_train_0434",
+      "text_similarity": 0.5908096280087527
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0049",
+      "nearest_train_id": "v4_train_0092",
+      "text_similarity": 0.6666666666666666
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0050",
+      "nearest_train_id": "v4_train_0420",
+      "text_similarity": 0.6840731070496083
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0051",
+      "nearest_train_id": "v4_train_0494",
+      "text_similarity": 0.7186440677966102
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0052",
+      "nearest_train_id": "v4_train_0426",
+      "text_similarity": 0.8133704735376045
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0053",
+      "nearest_train_id": "v4_train_0257",
+      "text_similarity": 0.7523510971786834
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0054",
+      "nearest_train_id": "v4_train_0081",
+      "text_similarity": 0.6980609418282548
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0055",
+      "nearest_train_id": "v4_train_0090",
+      "text_similarity": 0.6706586826347305
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0056",
+      "nearest_train_id": "v4_train_0314",
+      "text_similarity": 0.7102272727272727
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0057",
+      "nearest_train_id": "v4_train_0077",
+      "text_similarity": 0.6702412868632708
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0058",
+      "nearest_train_id": "v4_train_0257",
+      "text_similarity": 0.7055214723926381
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0059",
+      "nearest_train_id": "v4_train_0518",
+      "text_similarity": 0.6073059360730594
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0060",
+      "nearest_train_id": "v4_train_0206",
+      "text_similarity": 0.6294416243654822
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0061",
+      "nearest_train_id": "v4_train_0094",
+      "text_similarity": 0.625
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0062",
+      "nearest_train_id": "v4_train_0304",
+      "text_similarity": 0.589622641509434
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0063",
+      "nearest_train_id": "v4_train_0514",
+      "text_similarity": 0.5862884160756501
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0064",
+      "nearest_train_id": "v4_train_0260",
+      "text_similarity": 0.5825242718446602
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0065",
+      "nearest_train_id": "v4_train_0337",
+      "text_similarity": 0.7492063492063492
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0066",
+      "nearest_train_id": "v4_train_0272",
+      "text_similarity": 0.6994219653179191
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0067",
+      "nearest_train_id": "v4_train_0335",
+      "text_similarity": 0.7207207207207207
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0068",
+      "nearest_train_id": "v4_train_0270",
+      "text_similarity": 0.718266253869969
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0069",
+      "nearest_train_id": "v4_train_0111",
+      "text_similarity": 0.6329113924050633
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0070",
+      "nearest_train_id": "v4_train_0112",
+      "text_similarity": 0.7194719471947195
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0071",
+      "nearest_train_id": "v4_train_0265",
+      "text_similarity": 0.6864686468646864
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0072",
+      "nearest_train_id": "v4_train_0442",
+      "text_similarity": 0.6724137931034483
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0073",
+      "nearest_train_id": "v4_train_0464",
+      "text_similarity": 0.7058823529411765
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0074",
+      "nearest_train_id": "v4_train_0114",
+      "text_similarity": 0.7613636363636364
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0075",
+      "nearest_train_id": "v4_train_0119",
+      "text_similarity": 0.6763848396501457
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0076",
+      "nearest_train_id": "v4_train_0461",
+      "text_similarity": 0.6490765171503958
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0077",
+      "nearest_train_id": "v4_train_0458",
+      "text_similarity": 0.6526315789473685
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0078",
+      "nearest_train_id": "v4_train_0346",
+      "text_similarity": 0.7161125319693095
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0079",
+      "nearest_train_id": "v4_train_0119",
+      "text_similarity": 0.668693009118541
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0080",
+      "nearest_train_id": "v4_train_0117",
+      "text_similarity": 0.6550724637681159
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0081",
+      "nearest_train_id": "v4_train_0474",
+      "text_similarity": 0.6194225721784777
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0082",
+      "nearest_train_id": "v4_train_0334",
+      "text_similarity": 0.6994535519125683
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0083",
+      "nearest_train_id": "v4_train_0457",
+      "text_similarity": 0.6821705426356589
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0084",
+      "nearest_train_id": "v4_train_0121",
+      "text_similarity": 0.6630434782608695
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0085",
+      "nearest_train_id": "v4_train_0126",
+      "text_similarity": 0.6379746835443038
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0086",
+      "nearest_train_id": "v4_train_0098",
+      "text_similarity": 0.69164265129683
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0087",
+      "nearest_train_id": "v4_train_0114",
+      "text_similarity": 0.673972602739726
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0088",
+      "nearest_train_id": "v4_train_0269",
+      "text_similarity": 0.6265060240963856
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0089",
+      "nearest_train_id": "v4_train_0098",
+      "text_similarity": 0.6845238095238095
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0090",
+      "nearest_train_id": "v4_train_0097",
+      "text_similarity": 0.7333333333333333
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0091",
+      "nearest_train_id": "v4_train_0452",
+      "text_similarity": 0.6968085106382979
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0092",
+      "nearest_train_id": "v4_train_0451",
+      "text_similarity": 0.7225433526011561
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0093",
+      "nearest_train_id": "v4_train_0330",
+      "text_similarity": 0.653179190751445
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0094",
+      "nearest_train_id": "v4_train_0480",
+      "text_similarity": 0.6853932584269663
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0095",
+      "nearest_train_id": "v4_train_0452",
+      "text_similarity": 0.7010309278350515
+    },
+    {
+      "split": "test",
+      "sample_id": "v4_test_0096",
+      "nearest_train_id": "v4_train_0267",
+      "text_similarity": 0.6410958904109589
+    }
+  ],
+  "prior_overlap": {
+    "validation": {
+      "target_utterance": 0,
+      "conversation_context": 0,
+      "model_input_text": 0
+    },
+    "test": {
+      "target_utterance": 0,
+      "conversation_context": 0,
+      "model_input_text": 0
+    }
+  },
+  "prior_sources": [
+    "outputs/realistic_workplace_audit/realistic_workplace_v1.csv",
+    "outputs/realistic_workplace_audit/ambiguous_predictions_not_gold_accuracy.csv",
+    "outputs/realistic_workplace_audit/all_predictions.csv",
+    "outputs/realistic_workplace_audit/misclassified_clear_examples.csv",
+    "outputs/template_independent_splits/template_independent_train.csv",
+    "outputs/template_independent_splits/template_independent_test.csv",
+    "outputs/template_independent_splits/template_independent_validation.csv",
+    "outputs/natural_workplace_v3/validation.csv",
+    "outputs/natural_workplace_v3/test.csv",
+    "outputs/natural_workplace_v3/contextual_errors.csv",
+    "outputs/natural_workplace_v3/contextual_test_predictions.csv",
+    "outputs/natural_workplace_v3/train.csv",
+    "outputs/natural_workplace_v3/previous_v2_test_predictions.csv",
+    "outputs/natural_workplace_v3/target_only_test_predictions.csv",
+    "outputs/context_dependent_challenge/challenge_v1.csv",
+    "outputs/context_dependent_challenge/challenge_predictions.csv",
+    "outputs/balanced_context_v2/results/misclassified_examples.csv",
+    "outputs/balanced_context_v2/results/test_predictions.csv",
+    "outputs/balanced_context_v2/splits/validation.csv",
+    "outputs/balanced_context_v2/splits/test.csv",
+    "outputs/balanced_context_v2/splits/train.csv",
+    "outputs/context_dependent_training/results/test_predictions.csv",
+    "outputs/context_dependent_training/splits/validation.csv",
+    "outputs/context_dependent_training/splits/test.csv",
+    "outputs/context_dependent_training/splits/train.csv",
+    "outputs/template_independent_experiment/splits/template_independent_train.csv",
+    "outputs/template_independent_experiment/splits/template_independent_test.csv",
+    "outputs/template_independent_experiment/splits/template_independent_validation.csv"
+  ],
+  "runtime_prior_overlap": {
+    "validation": {
+      "model_input_text": 0,
+      "target_utterance": 0,
+      "conversation_context": 0
+    },
+    "test": {
+      "model_input_text": 0,
+      "target_utterance": 0,
+      "conversation_context": 0
+    }
+  },
+  "runtime_prior_files": [
+    "/content/latent_commitment_template_independent_v1/splits/template_independent_train.csv",
+    "/content/latent_commitment_template_independent_v1/splits/template_independent_validation.csv",
+    "/content/latent_commitment_template_independent_v1/splits/template_independent_test.csv",
+    "/content/latent_commitment_template_independent_v1/export/splits/template_independent_train.csv",
+    "/content/latent_commitment_template_independent_v1/export/splits/template_independent_validation.csv",
+    "/content/latent_commitment_template_independent_v1/export/splits/template_independent_test.csv",
+    "/content/latent_commitment_balanced_v2/splits/validation.csv",
+    "/content/latent_commitment_balanced_v2/splits/test.csv",
+    "/content/latent_commitment_balanced_v2/splits/train.csv",
+    "/content/latent_commitment_balanced_v2/results/test_predictions.csv",
+    "/content/latent_commitment_balanced_v2/results/misclassified_examples.csv",
+    "/content/latent_commitment_balanced_v2/export/splits/validation.csv",
+    "/content/latent_commitment_balanced_v2/export/splits/test.csv",
+    "/content/latent_commitment_balanced_v2/export/splits/train.csv",
+    "/content/latent_commitment_balanced_v2/export/results/test_predictions.csv",
+    "/content/latent_commitment_balanced_v2/export/results/misclassified_examples.csv",
+    "/content/latent_commitment_context_dependent_v1/results/challenge_v1.csv",
+    "/content/latent_commitment_context_dependent_v1/results/challenge_predictions.csv",
+    "/content/latent_commitment_natural_v3/results/target_only_test_predictions.csv",
+    "/content/latent_commitment_natural_v3/results/contextual_errors.csv",
+    "/content/latent_commitment_natural_v3/results/contextual_test_predictions.csv",
+    "/content/latent_commitment_natural_v3/results/validation.csv",
+    "/content/latent_commitment_natural_v3/results/test.csv",
+    "/content/latent_commitment_natural_v3/results/previous_v2_test_predictions.csv",
+    "/content/latent_commitment_natural_v3/results/train.csv",
+    "/content/latent_commitment_context_training_v1/splits/validation.csv",
+    "/content/latent_commitment_context_training_v1/splits/test.csv",
+    "/content/latent_commitment_context_training_v1/splits/train.csv",
+    "/content/latent_commitment_context_training_v1/results/test_predictions.csv",
+    "/content/latent_commitment_context_training_v1/export/splits/validation.csv",
+    "/content/latent_commitment_context_training_v1/export/splits/test.csv",
+    "/content/latent_commitment_context_training_v1/export/splits/train.csv",
+    "/content/latent_commitment_context_training_v1/export/results/test_predictions.csv",
+    "/content/latent_commitment_realistic_audit_v1/results/all_predictions.csv",
+    "/content/latent_commitment_realistic_audit_v1/results/realistic_workplace_v1.csv",
+    "/content/latent_commitment_realistic_audit_v1/results/ambiguous_predictions_not_gold_accuracy.csv",
+    "/content/latent_commitment_realistic_audit_v1/results/misclassified_clear_examples.csv"
+  ],
+  "metadata_not_serialized": true
+}

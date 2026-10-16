@@ -1,0 +1,134 @@
+WORKPLACE COMMITMENT CLASSIFICATION — VERIFIED PROJECT REFERENCE
+Recorded: 16 October 2026. Current deployed checkpoint: V4 (95.83% on 96 authored test examples).
+
+1. PURPOSE AND INPUT
+Classify the target employee's commitment to workplace work using the preceding conversation and the employee's target reply. This is four-class supervised NLP classification, not a generative chatbot, task executor, lie detector or judgement of actual future completion.
+One dataset row contains conversation context, target employee reply, intended label and metadata. A conversation may contain several turns. Rows are not books or tokens.
+Exact model input:
+[CONTEXT] {context} [TARGET SPEAKER] employee [TARGET UTTERANCE] {reply}
+Label/group/split/rationale columns are not included in the model input.
+
+2. LABEL POLICY
+0 NO_COMMITMENT: no new work undertaking; includes complete refusal, factual information, completed past work, another person's promise and merely social agreement.
+1 LATENT_COMMITMENT: live ownership inferred from relevant ongoing action or preparation in response to a request, without direct acceptance wording.
+2 QUALIFIED_COMMITMENT: actual undertaking limited by an unresolved condition, uncertainty, or partial scope. Refusing the rest does not cancel a partial acceptance.
+3 EXPLICIT_COMMITMENT: direct unqualified acceptance/promise of the requested work. A prerequisite already satisfied is not an unresolved condition.
+These are provisional project definitions. Availability and bare acknowledgements can admit multiple reasonable interpretations. V4 often misclassifies those cases with high confidence.
+
+3. ORIGINAL USER DATA AND SEPARATE EXPERIMENTS
+Original file: <original-downloads-folder>/latent_commitment_leakage_free_splits.zip
+Original partitions: 7000 training, 1000 validation, 2000 test; four balanced classes (1750/250/500 per class respectively).
+Original model: fresh microsoft/deberta-v3-base, 3 epochs, lr2e-5, seed42, batch8, gradient accumulation2, validation per epoch, best validation macro-F1 checkpoint at epoch1 (step438), Tesla T4, about650 seconds. Its original test accuracy/precision/recall/F1 were100%.
+The original model is NOT an ancestor of the current V4 checkpoint.
+Further diagnostics: template-held-out model99.65%; target-only model99.7%; context-shuffled evaluation94.8%. These high scores exposed the ease of synthetic wording/template cues. Exact disjoint splits alone did not establish contextual reasoning.
+An early context-dependent challenge gave the older contextual model55% and target-only48.75%. A separate context-dependent V1 model reached about84.90%. These were separate experimental branches, not the current model's inherited weights.
+
+4. EXACT CURRENT CHECKPOINT LINEAGE
+Fresh Microsoft pretrained DeBERTa-v3-base -> Balanced context V2 -> Natural workplace V3 contextual checkpoint -> Workplace V4 selected checkpoint.
+V2 explicitly loaded microsoft/deberta-v3-base, with no previous task-fine-tuned weights. Therefore the current model did NOT learn from the user's original7000 rows in this project's fine-tuning lineage. Microsoft's general pretraining is distinct from this project.
+
+Stage V2:
+- New generated synthetic context-dependent data:7680train/512validation/768test.
+- Balanced:1920training examples per class.
+- 24 training reply families,8context families,20scenario domains; many rows reuse reply/template constructions.
+- Fresh pretrained initialization; ordinary four-class cross-entropy.
+- 3epochs executed; epoch1 retained (step480), validation macro-F1.9863178952. Epochs2and3 tied, earlier best retained.
+- lr2e-5, seed2026, batch8, accumulation2 (nominal effective16), evaluation batch16, AdamW, weight decay.01,warmup ratio.1, default linear LR schedule, FP16,TeslaT4,max256tokens.
+- Training about571.28sec.
+- Own synthetic test100%; later realistic72-clear-example diagnostic47/72=65.28%. On the later V3 fresh88test,54/88=61.36%.
+- WeightsSHA256:f1b091347c806c6ad74a4652041defa1b785ba571d58cfcbb805c4b9524c3321
+
+Stage V3 contextual:
+- Started from the V2 checkpoint above.
+- 232balanced training conversations (58/class),48validation (12/class),88test (22/class).
+- Training included72previously exposed diagnostic conversations; these no longer count as unseen evaluation data.
+- Maximum8epochs; early stopping patience2;6epochs executed; epoch4 retained (step60).
+- lr1e-5,seed20261016,batch8,accumulation2,evaluation batch16,AdamW,weight decay.01,warmup.1,FP16,T4,max256tokens; ordinary cross-entropy.
+- Best validation macro-F1.9372727273; training about471.98sec.
+- Fresh88test:78/88=88.64%; TF-IDF full input also88.64%; separately trained target-only DeBERTa72.73%. The lexical tie left shortcut concerns unresolved.
+- A separate target-only ablation ran4epochs and retainedepoch2; it is NOT V4's ancestor.
+- Contextual weightsSHA256:a6f8b3fa7565136761183cacbd4d61e9b55e3eb411004368cdaf5130335d5009
+
+Stage V4 CURRENT:
+- Started from V3 contextual weights above.
+- 528training conversations,balanced132/class:all368V3rows (232train+48former validation+88former test) plus160additional authored examples.
+- 448distinct training target replies;80same-reply/different-context pairs.
+- New validation64rows:20No/14Latent/16Qualified/14Explicit,16context pairs.
+- New final test96rows:24/class,80distinct target replies,16context pairs(32rows),64everyday rows;24multi-turn rows overlapping those categories.
+- Two predetermined learning rates,5e-6 and1e-5; both start independently from V3, not sequentially from each other.
+- Shared settings:max6epochs,seed20261017,batch8,accumulation2,evaluation batch16,AdamW,weight decay.01,warmup.1,FP16,T4,max256tokens,early stopping patience2,epoch evaluation/checkpointing.
+- Whole-model fine-tuning; no parameter freezing or LoRA in V4.
+- Pair sampler preserves both rows of a context pair within the same minibatch; pair/group metadata never enters model input tokens.
+- Loss:cross-entropy +.2*mean softplus pair-margin penalty; margin1.
+  For two contexts with logitsA/B and intended labelsa/b:
+  pair penalty=[softplus(1-(A[a]-B[a]))+softplus(1-(B[b]-A[b]))]/2.
+- Validation selection score=.8*macro-F1+.2*fraction of context pairs with both examples correct. Tiebreak:macro-F1,then lower learning rate.
+- Selected5e-6run executed6epochs and retainedepoch6(step198); about138.44sec.
+- Other1e-5candidate executed5epochs and retainedepoch3(step99); about127.45sec. It is not the deployed model.
+- Both candidates reached identical best validation score.9754752431 and macro-F1.9849690539; lower learning rate selected by predefined tie-break.
+- Current selected weightsSHA256:fc3f77b652ee7231430eb95d90d300b6496983fc37a1c42670017d8936b2a633
+
+Epoch accounting:the ancestor runs executed3+6+6=15epochs, but retained weights follow V2epoch1 -> V3epoch4 -> V4epoch6. These are stages on different datasets, not15epochs on one combined dataset. Other candidates and ablations are additional experiments.
+Row accounting:7680+232+528=8440stage-level training-row uses, not unique examples and not multiplied by epochs. The232V3training rows are reused in V4. Direct normalized full-input union check confirms8208distinct training inputs across those three stages (V2/V3overlap0,V2/V4overlap0,V3/V4overlap232). This does not mean8208independent linguistic patterns.
+
+5. CURRENT V4 EVALUATION
+Validation64:accuracy98.4375%,macro precision98.3333%,macro recall98.75%,macro-F198.4969%,loss.0732788444,pair-both-correct15/16=93.75%.
+Fresh final test96:92correct/4wrong;accuracy95.8333%,macro precision96.1806%,macro recall95.8333%,macro-F195.8689%. Weighted precision/recall/F1 equal the macro values because all four classes have equal support. Micro precision/recall/F1 equal accuracy for this single-label multiclass task. Test cross-entropy/AUC/calibration error were not recorded; do not invent them.
+Per-class test (precision,recall,F1,support):
+NO:95.8333%,95.8333%,95.8333%,24.
+LATENT:100%,95.8333%,97.8723%,24.
+QUALIFIED:100%,91.6667%,95.6522%,24.
+EXPLICIT:88.8889%,100%,94.1176%,24.
+Confusion matrix:rows intended,columns predicted [No,Latent,Qualified,Explicit]:
+No:[23,0,0,1]
+Latent:[0,23,0,1]
+Qualified:[1,0,22,1]
+Explicit:[0,0,0,24]
+Subsets:
+everyday62/64=96.875%,macro-F196.8182%;context-pair rows30/32=93.75%,macro-F193.8889%;multi-turn23/24=95.8333%,macro-F195.8042%.
+Both context twins correct14/16=87.5%;predictions changed across15/16pairs. Three of the four errors had uncalibrated score>=90%.
+Same96test comparisons:
+PreviousV3:85/96=88.5417%,macro-F188.3968%.
+CurrentV4:92/96=95.8333%,macro-F195.8689%.
+TF-IDFfull:87/96=90.625%,macro-F190.5297%.
+TF-IDFtarget-only:72/96=75%,macro-F173.7427%.
+TF-IDFcontext-only:74/96=77.0833%,macro-F176.2656%.
+V4retained all85previously correct examples and fixed7of11V3errors. V2was not evaluated on this96-row test; do not claim a direct V2/V4same-test comparison.
+Blank-context original-label agreement69.7917%;five shuffled-context runs averaged69.5833%. These are sensitivity diagnostics, not semantic accuracy under newly labelled altered contexts.
+
+6. SPLITS, LEAKAGE AND LIMITATIONS
+Fresh validation and final test were frozen before V4training. Validation alone chose checkpoint/configuration. No final-test-driven edits to model/data/labels/thresholds were made in that completed experiment. All96test rows retained. Exact normalized input/context/target/group overlap across V4splits was zero; checked prior CSVdata also had zero exact overlaps with fresh validation/test. Context pairs stayed together in one split. Input provenance was asserted; labels and group IDs were excluded.
+These checks DO NOT prove no semantic similarity, template shortcuts, single-author style or pretraining contamination. Data is fictional and agent-authored; labels are provisional, not independently reviewed human gold. Only96fresh test cases. Later user manual examples exposed errors on availability, acknowledgements and preparatory requests. 95.83%is specific to the saved test, not established real-world accuracy or production readiness. Softmax scores are uncalibrated and can be very high on mistakes. Old V3test is training for V4and cannot be reported as unseen V4test. Context sensitivity is evidence of using context, not proof of correct reasoning in every case.
+
+7. SAVED MODEL, NOTEBOOK AND LOCAL RUNNING
+Notebook:https://colab.research.google.com/drive/1szl86j1Ol2WFZmGdxQzCnWyDPlNzzuOj
+Current notebook contains multiple experiments; do NOT use Run all merely for inference.
+Local base:<original-output-folder>
+Current model ZIP:latent_commitment_workplace_v4_model.zip
+Results ZIP:latent_commitment_workplace_v4_results.zip
+Detailed results:workplace_v4/
+Saved executed notebook:Latent_Commitment_DeBERTa_Training.ipynb (local saved snapshot can precede newest preparatory browser cells).
+Local app:commitment_model_local/test_model.py
+Double-click commitment_model_local/Run Model.command, or:
+cd <original-output-folder>/commitment_model_local
+.venv/bin/python test_model.py
+Enter preceding messages on ONE line at Context, then employee target at Employee reply. Type quit at Context to exit.
+CLI:.venv/bin/python test_model.py --context "[manager]: Can you send the revised summary?" --reply "Yes, I'll send it today."
+Use --json for structured output.
+Offline CPU inference;no retraining;no conversation persistence by the app;inputs over256tokens or blank fields are rejected. Keep folder in place to preserve venv paths.
+Model weights/config/tokenizer hashes checked before loading. CPUdeployment reproduced all96original Colab prediction labels (deployment parity, not a new independent test).
+Drive backup:https://drive.google.com/drive/folders/11H35YyKLoY4QfVTjczrMemFetTx_Hsy5
+Backup folder:Latent Commitment DeBERTa V4 - 95.83% - 2026-10-16.
+Model stored as six ZIPparts plus manifest and restore_model.py because connector size limits prevented one large upload. Download all parts,manifest,script together and run python restore_model.py. Local reconstruction checksums verified. Remote existence/byte sizes verified; remote byte-for-byte checksums were not independently read back.
+Colab restore/test cell restores exactV4fromDrive,verifies hashes,and accepts new inputs without training. GoogleDriveauthorization is needed in fresh runtime; credential propagation has recently failed.
+
+8. REPRODUCIBILITY SOFTWARE
+Training:transformers4.57.1,datasets4.3.0,accelerate1.11.0,sentencepiece.2.1,torch2.11.0+cu130,numpy2.1.3,pandas2.2.3,scikit-learn1.6.1.
+Local inference:isolatedPython3.12.13,torch2.14.1,transformers4.57.1,sentencepiece.2.1;exact installed pins in commitment_model_local/requirements-local.txt.
+V4model archiveSHA256:b8ee949d2e5def582a3f6a9ed2f055e7f3ec844f2c87c74cbea3b795950137c1.
+
+9. NEWER V5 STATUS
+New ambiguous-reply workflow prepared, not trained or evaluated. Prepared splits588train/32validation/48fresh strict test plus8separate ambiguous diagnostic cases. This is NOT the current deployed model and has no measured performance. ColabFreeGPUquota was exhausted and Drive restoration failed; localmodelZIPupload was requested. Do not attribute any V5settings or proposed changes to the trained V4model.
+
+10. SAFE PROJECT DESCRIPTION
+This project fine-tunes DeBERTa-v3-base to classify workplace commitment from conversation context and a target employee reply into four categories. The final checkpoint follows synthetic context-dependent training and two workplace adaptation stages. On a frozen96-example,balanced,fictional workplace test it achieved95.83%accuracy and95.87%macro-F1,with14/16context pairs entirely correct. Exact-overlap audits,lexical baselines and context perturbations were included. Ambiguous-language errors and the small agent-authored evaluation limit generalization claims.

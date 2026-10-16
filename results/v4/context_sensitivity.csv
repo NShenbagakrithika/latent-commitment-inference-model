@@ -1,0 +1,7 @@
+condition,accuracy,macro_precision,macro_recall,macro_f1,prediction_changes,interpretation
+blank_context,0.6979166666666666,0.7485872235872235,0.6979166666666667,0.6930350900160491,29,Sensitivity with original labels; no validated semantic gold for changed context.
+shuffle_42,0.6770833333333334,0.6723544973544973,0.6770833333333333,0.6680205415499533,32,Sensitivity with original labels; no validated semantic gold for changed context.
+shuffle_43,0.6458333333333334,0.6562931034482758,0.6458333333333333,0.642918752406623,33,Sensitivity with original labels; no validated semantic gold for changed context.
+shuffle_44,0.7395833333333334,0.7511765116603826,0.7395833333333334,0.7311087463261376,25,Sensitivity with original labels; no validated semantic gold for changed context.
+shuffle_45,0.7395833333333334,0.7476148140284762,0.7395833333333334,0.7346842764870336,24,Sensitivity with original labels; no validated semantic gold for changed context.
+shuffle_46,0.6770833333333334,0.6772068511198945,0.6770833333333334,0.6737657176140062,31,Sensitivity with original labels; no validated semantic gold for changed context.

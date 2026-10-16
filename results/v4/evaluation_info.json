@@ -1,0 +1,17 @@
+{
+  "initial_model_sha256": "a6f8b3fa7565136761183cacbd4d61e9b55e3eb411004368cdaf5130335d5009",
+  "selected_model_sha256": "fc3f77b652ee7231430eb95d90d300b6496983fc37a1c42670017d8936b2a633",
+  "fresh_test_sha256": "08aa672d648cb29cfb6e3a8e19a8627d3e057e071583062c1c4f70281b64de2a",
+  "same_frozen_test_for_all_models": true,
+  "test_used_for_selection": false,
+  "no_model_data_or_label_edits_after_test": true,
+  "test_n": 96,
+  "context_pairs": 16,
+  "source": "Agent-authored fictional examples; provisional labels, not independent human gold",
+  "limitations": [
+    "Small single-author corpus; no independent real-workplace validation",
+    "Exact overlap audit is not proof against all semantic overlap or wording artifacts",
+    "Old V3 partitions are all training material now; old test scores are not unseen",
+    "Perturbed contexts retain original labels only for sensitivity diagnostics"
+  ]
+}

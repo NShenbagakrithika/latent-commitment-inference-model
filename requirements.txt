@@ -1,0 +1,6 @@
+# Recommended: Python 3.12. Install PyTorch for your OS first if needed.
+torch>=2.2,<3
+transformers==4.57.1
+sentencepiece==0.2.1
+protobuf>=4.25,<8
+safetensors>=0.4.3,<1
